@@ -1,0 +1,18 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "lib": ["esnext", "dom"],
+    "types": ["@dcloudio/types",
+    "@types/wechat-miniprogram",// 配置1
+    "@uni-helper/uni-app-types"] // 配置2
+  },
+  "vueCompilerOptions": {
+    "nativeTags": ["block", "component", "template", "slot"] // 配置3
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
